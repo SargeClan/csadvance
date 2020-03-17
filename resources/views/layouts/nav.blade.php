@@ -45,7 +45,7 @@
                             </ul>
                             <!--end level 2-->
                         </li>
-                        <li><a href="#">Investment</a>
+                        <li><a href="{{route('online-investment-company-nigeria')}}">Investment</a>
                           
                         </li>
                          <li><a href="#">About Us <i class="fa fa-angle-down"></i></a>

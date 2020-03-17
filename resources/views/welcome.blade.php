@@ -84,7 +84,9 @@
             </div>
             <div class="col-md-4">
                 <!-- <h6 class="mb-4">Flexible Rates</h6>-->
-                <p class="text-muted">CSAdvance is a foremost fintech company that offers quick online loans to Nigerians within 24 hours of application. <br/><br/><b>Whether personal or for your business, you can get a loan of up to ₦5,000,000.</b> <br/><br/>We also offer flexible savings and investment solutions to help you achieve your financial goals.</p>
+                <p class="text-muted">CSAdvance is a contemporary finance firm that provides individuals with access to financing solutions. We offer easy and swift collateral-free loans at the push of a button.. 
+                <br/><br/><b>Whether personal or for your business, you can get a loan of up to ₦5,000,000.</b> 
+                <br/><br/>We also offer flexible and attractive investment solutions to help you achieve your financial goals.</p>
                 <a href="{{asset('about')}}" class="btn-read-more mb-4">Read More</a>
             </div>
             <div class="col-md-4">
@@ -153,7 +155,7 @@
                 <div class="card border-0 mb-md-0 mb-3 box-hover">
                     <div class="card-body p-md-5 p-4">
                         <h5 class="">Step 2</h5>
-                        <p class="text-muted">Upload or email us scanned copies of the required documents.</p>
+                        <p class="text-muted">Upload or email scanned copies of the required documents.</p>
                         <br/>
                         
                     </div>
@@ -163,7 +165,7 @@
                 <div class="card border-0 mb-md-0 mb-3 box-hover">
                     <div class="card-body p-md-5 p-4">
                         <h5 class="">Step 3</h5>
-                        <p class="text-muted">Get approved. Get your money within 24 hours.</p>
+                        <p class="text-muted">Get approved. Get your money now.</p>
                         <br/>
                     
                     </div>
@@ -193,12 +195,12 @@
 
             <div class="col-md-4">
                 <div class="card mb-md-0 mb-3 border-0 box-hover">
-                    <a href="#"><img class="card-img-top" src="{{asset('adv/img/logo/247-online-loans-lagos-nigeria.jpeg')}}" alt="get quick online loans in nigeria, no collateral"></a>
+                    <a href="#"><img class="card-img-top" src="{{asset('adv/img/logo/quick-online-loans-nigeria.jpeg')}}" alt="get quick online loans in nigeria, no collateral"></a>
                     <div class="card-body py-4">
                         <!-- <a href="#" class="mb-2 d-block">Travel</a> -->
                         <h5 class="mb-4"><a href="#">Loans</a></h5>
                         <div class="mb-4">
-                            <p>Get quick online loans from ₦200,000 to ₦5,000,000 within 24 hours of application..</p>
+                            <p>Get quick online loans from ₦200,000 to ₦5,000,000.</p>
                         </div>
                          <a href="{{route('quick-online-loans-no-collateral-nigeria')}}" class="btn-read-more mt-4">Learn More</a>
                     </div>
@@ -207,7 +209,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card border-0 box-hover">
-                    <a href="#"><img class="card-img-top" src="{{asset('adv/img/logo/quick-online-loans-nigeria.jpeg')}}" alt="quick online loans in nigeria"></a>
+                    <a href="#"><img class="card-img-top" src="{{asset('adv/img/logo/247-online-loans-lagos-nigeria.jpeg')}}" alt="quick online loans in nigeria"></a>
                     <div class="card-body py-4">
                         <!-- <a href="#" class="mb-2 d-block">Art</a> -->
                         <h5 class="mb-4"><a href="#">Investments</a></h5>

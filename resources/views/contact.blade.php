@@ -49,7 +49,7 @@
             <div class="col-md-4">
                 <div class="blurb blurb-border mb-4">
                     <i class="iconers fas fa-building"></i>
-                    <h6 class="mb-3">Main Office</h6>
+                    <h6 class="mb-3">Office Address</h6>
                     <p>8b Sumbo Jibowu Street, Ikoyi<br>
                        </p>
                 </div>
@@ -57,7 +57,7 @@
             <div class="col-md-4">
                 <div class="blurb blurb-border mb-4">
                     <i class="iconers fas fa-envelope-open-text"></i>
-                    <h6 class="mb-3">E-mailing Address </h6>
+                    <h6 class="mb-3">Email </h6>
                     <p><a href="mailto:sisi@mycsadvance.com">sisi@mycsadvance.com</a></p>
                        
                 </div>

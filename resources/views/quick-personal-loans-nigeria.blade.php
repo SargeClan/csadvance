@@ -23,7 +23,7 @@
 
 <!--page title start-->
 <section class="section-gap section-top bg-gray text-center">
-    <div class="hero-img bg-overlay" data-overlay="2" style="background-image: url({{asset('adv/img/get-quick-online-business-loans-nigeria.jpg')}});"></div>
+    <div class="hero-img bg-overlay" data-overlay="2" style="background: #21409A; /*background-image: url({{asset('adv/img/get-quick-online-business-loans-nigeria.jpg')}});*/"></div>
     <div class="container">
         <div class="row justify-content-md-center align-items-center text-white py-lg-5">
             <div class="push-down col-md-7">
@@ -41,14 +41,12 @@
 <div class="section-gap">
     <div class="container">
         <div class="row justify-content-between align-items-center">
-            <div class="col-md-4">
+            <div class="col-md-6">
                <!--  <h6>About Us</h6> -->
-                <h2 class="loan-service mb-4">Personal Loans made simple!</h2>
-                <p class="text-muted">Live life to the max with our personal loans solutions.
-
-At CSAdvance, we are committed to making your financial life easier and better during times of emergencies. Our pay small-small package allows you get fast cash at the click of a button at a minimal interest rate. Join the quick crew today!
-
-We are here to help you.</p>
+                <h2 class="loan-service mb-4">Personal Loans Made Simple!</h2>
+                <p class="text-muted">
+                Live life to the max with our personal loans solutions. At CSAdvance, we are committed to making your financial life easier when there is an emergency. Our pay small-small package allows you get fast cash at the click of a 
+                button at a minimal interest rate. Join the quick crew today! We are here to help you.</p>
                 <a href="{{route('loan-application')}}" class="btn btn-pill btn-yellow btn-relative mt-lg-5">Apply Now</a>
 
             </div>
@@ -59,6 +57,7 @@ We are here to help you.</p>
     </div>
 </div>
 <!--about us end-->
+
 
 <!--goal start-->
 <div class="section-gap bg-gray">
@@ -72,46 +71,40 @@ We are here to help you.</p>
     <table class="table table-bordered table-striped">
         <thead>
         <tr>
-            <th>Eligibility</th>
-            <th>Documents Required</th>
+            <th>Eligibility and Documents Required</th>
+          
            
         </tr>
         </thead>
         <tbody>
+
         <tr>
-            <td><li class="custom-list custom-list-border"><i class="fa fa-check font-size-12 pr-3"></i>You must be a salaried employee</li></td>
-            <td>
-               <li class="custom-list custom-list-border"><i class="fa fa-check font-size-12 pr-3"></i>Aadhaar card</li>
-            </td>
+            <td><li class="custom-list custom-list-border"><i class="fa fa-check font-size-12 pr-3"></i>1 passport photograph</li></td>
+           
             
         </tr>
          <tr>
-            <td><li class="custom-list custom-list-border"><i class="fa fa-check font-size-12 pr-3"></i>Age: 23-55 years old</li></td>
-            <td>
-               <li class="custom-list custom-list-border"><i class="fa fa-check font-size-12 pr-3"></i>PAN card</li>
-            </td>
+            <td><li class="custom-list custom-list-border"><i class="fa fa-check font-size-12 pr-3"></i>Age between 22 years and 55 years</li></td>
+          
             
         </tr>
          <tr>
-            <td><li class="custom-list custom-list-border"><i class="fa fa-check font-size-12 pr-3"></i>Net Monthly Income must be more than Rs. 20,000.</li></td>
-            <td>
-               <li class="custom-list custom-list-border"><i class="fa fa-check font-size-12 pr-3"></i>4 Cheques from your salary Account</li>
-            </td>
-            
+            <td><li class="custom-list custom-list-border"><i class="fa fa-check font-size-12 pr-3"></i>6 months stamped bank statement from the salary bank account</li></td>
         </tr>
          <tr>
-            <td><li class="custom-list custom-list-border"><i class="fa fa-check font-size-12 pr-3"></i>No defaults in the last 24 months.</li></td>
-            <td>
-               <li class="custom-list custom-list-border"><i class="fa fa-check font-size-12 pr-3"></i>Current Address Proof</li>
-            </td>
-            
+            <td><li class="custom-list custom-list-border"><i class="fa fa-check font-size-12 pr-3"></i>Valid means of identification (National ID card, PVC, International Passport or Driving License)</li></td>
         </tr>
          <tr>
-            <td><li class="custom-list custom-list-border"><i class="fa fa-check font-size-12 pr-3"></i>You must be residing in Delhi/NCR, Bangalore, Pune, Chennai,Mumbai or Hyderabad.</li></td>
-            <td>
-               <li class="custom-list custom-list-border"><i class="fa fa-check font-size-12 pr-3"></i>Permanent Address Proof (in case the permanent address is different from the address on Aadhaar card)</li>
-            </td>
-            
+            <td><li class="custom-list custom-list-border"><i class="fa fa-check font-size-12 pr-3"></i>Postdated cheques </li></td>
+        </tr>
+         <tr>
+            <td><li class="custom-list custom-list-border"><i class="fa fa-check font-size-12 pr-3"></i>Duly activated direct debit mandate </li></td> 
+        </tr>
+        <tr>
+            <td><li class="custom-list custom-list-border"><i class="fa fa-check font-size-12 pr-3"></i>Work I.D card</li></td> 
+        </tr>
+        <tr>
+            <td><li class="custom-list custom-list-border"><i class="fa fa-check font-size-12 pr-3"></i>Duly signed Loan Agreement/offer letter</li></td> 
         </tr>
       
         </tbody>
@@ -123,21 +116,20 @@ We are here to help you.</p>
 </div>
 <!--goal end-->
 
-
-
 <!--promo start-->
-<div class="section-gap">
+<div class="section-cta">
     <div class="container">
         <div class="row justify-content-center align-items-center text-center">
             <div class="col-md-6 mb-lg-5 mb-4">
-                <h2 class="mb-4">Ready To Get Started</h2>
-                <p class="text-muted">Let's help you reach your financial goals.</p>
-                <a href="{{route('loan-application')}}" class="btn btn-pill btn-relative btn-yellow mt-lg-5">Apply Now</a>
+                <h2 class="mb-4">Ready To Get Started?</h2>
+                <p class="text-muted text-serve">Let's help you reach your financial goals.</p>
+                <a href="{{route('loan-application')}}" class="btn btn-pill btn-yellow mt-lg-5 btn-serve">Apply Now</a>
             </div>
         </div>
     </div>
 </div>
 <!--promo end-->
+
 
 @include('layouts.footer')
 </body>

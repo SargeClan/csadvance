@@ -172,7 +172,7 @@ h6,
 {
     position: relative;
 
-    padding-top: 6rem;
+    padding-top: 3rem;
     padding-bottom: 3rem;
 }
 
@@ -306,10 +306,16 @@ h6,
 {
     .section-gap
     {
+        padding-top: 6rem;
+    padding-bottom: 6rem;
+    }
+     .section-head
+    {
         padding-top: 7.5rem;
         padding-bottom: 7.5rem;
     }
 }
+
 
 /*------------------------------------
 header
@@ -1376,7 +1382,7 @@ hero banner
     }
     .section-top
     {
-        padding-top: 13.3125rem;
+     
     }
     .scroll-down
     {
@@ -5176,14 +5182,41 @@ utilities
     width: 25%;
 
 }
+.text-serve {
+    position: relative;
+    bottom: 20px;
+}
+
 }
 @media (max-width:700px){
     .push-down {
     position: relative;
     top: 30px;
 }
-.loan-service {
-   margin-top: -70px;
+
+.text-serve {
+    position: relative;
+    bottom: 20px;
+}
+
+.btn-BS {
+    margin-bottom: 10px;
+}
+.btn-index {
+    position: relative;
+    bottom: 30px;
+}
+.btn-relative {
+    position: relative;
+     bottom: 8px;
+}
+.section-cta-b {
+    position: relative;
+    top: 20px;
+}
+.section-cta {
+    position: relative;
+    top: 20px;
 }
 
 }
@@ -5195,6 +5228,18 @@ utilities
 .no-show {
     display: none;
 }
+.btn-BS {
+    position: relative;
+    bottom: 30px;
+}
+
+
+.btn-index {
+    position: relative;
+    bottom: 20px;
+}
+
+
 }
 .btn-yellow {
     background: #e6b400;
@@ -5210,8 +5255,44 @@ utilities
     color: #e6b400;
 }
 
-
-.btn-relative {
-     bottom: 10px;
+@media (min-width:700px) and (max-width: 900px){
+    .btn-serve {
+        position: relative;
+        bottom: 5px;
+        }
+    .section-cta {
+        position: relative;
+        top: 28px;
+        padding-bottom: 25px;
+        }
 }
+@media (max-width:700px){
+   .btn-serve {
+    position: relative;
+    bottom: 15px;
+}
+}
+@media (min-width:900px){
+   .btn-serve {
+    position: relative;
+    bottom: 60px;
+}
+.btn-relative {
+    position: relative;
+     bottom: 40px;
+}
+.section-cta-b {
+    position: relative;
+    top: 30px;
+}
+.section-cta {
+    position: relative;
+    top: 60px;
+}
+}
+
+
+
+
+
 

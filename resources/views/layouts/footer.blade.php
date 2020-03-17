@@ -15,14 +15,13 @@
                     <li><a href="{{route('loan-application-faq')}}">FAQ</a></li>
                     <li><a href="{{route('contact')}}">Contact</a></li>
                 </ul>
-                <p class="copyright">&copy; 2019 A <a href="https://cardinalstone.com">Cardinal Stone</a> company. All right reserved.</p>
+                <p class="copyright">&copy; 2020 CSAdvance Finance Company. All right reserved.</p>
             </div>
             <div class="col-md-4 text-md-right">
                 <ul class="footer-link social-links">
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                    <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                    <li><a href="https://www.facebook.com/CSAdvanceNG/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/15809122" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://www.instagram.com/csadvanceng/" target="_blank"><i class="fab fa-instagram"></i></a></li>
                 </ul>
                 <p class="copyright">Website designed by <a href="https://sargeclan.com">Sarge</a></p>
             </div>

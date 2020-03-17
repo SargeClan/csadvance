@@ -22,7 +22,7 @@
 
 <!--page title start-->
 <section class="section-gap section-top bg-gray text-center">
-    <div class="hero-img bg-overlay" data-overlay="2" style="background-image: url({{asset('adv/img/get-quick-online-business-loans-nigeria.jpg')}});"></div>
+    <div class="hero-img bg-overlay" data-overlay="2" style="background: #21409A; /* background-image: url({{asset('adv/img/get-quick-online-business-loans-nigeria.jpg')}}); */"></div>
     <div class="container">
         <div class="row justify-content-md-center align-items-center text-white py-lg-5">
             <div class="push-down col-md-7">
@@ -85,7 +85,7 @@
                 <div class="blurb blurb-border mb-4">
                     <i class="iconers fas fa-money-bill-wave"></i>
                     <h6 class="mb-3">Quick Access To Cash</h6>
-                    <p class="text-muted">Get access to cash, within 24 hours, straight to your account.</p>
+                    <p class="text-muted">Get access to cash, straight to your account.</p>
                 </div>
             </div>
               <div class="col-md-4">
@@ -106,7 +106,7 @@
                 <div class="blurb blurb-border mb-4">
                     <i class="iconers fas fa-sort-amount-down-alt"></i>
                     <h6 class="mb-3">Low Interest Rates</h6>
-                    <p class="text-muted">Our rates are very competitive. Emjoy the lowest rates with CS.</p>
+                    <p class="text-muted">Our rates are very competitive. Enjoy the lowest rates with CS.</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -129,13 +129,13 @@
 <!--features end-->
 
 <!--promo start-->
-<div class="section-gap">
+<div class="section-cta">
     <div class="container">
         <div class="row justify-content-center align-items-center text-center">
             <div class="col-md-6 mb-lg-5 mb-4">
-                <h2 class="mb-4">Ready To Get Started</h2>
-                <p class="text-muted">Let's help you reach your financial goals.</p>
-                <a href="{{route('loan-application')}}" class="btn btn-pill btn-yellow mt-lg-5">Apply Now</a>
+                <h2 class="mb-4">Ready To Get Started?</h2>
+                <p class="text-muted text-serve">Let's help you reach your financial goals.</p>
+                <a href="{{route('loan-application')}}" class="btn btn-pill btn-yellow mt-lg-5 btn-serve">Apply Now</a>
             </div>
         </div>
     </div>

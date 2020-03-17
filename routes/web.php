@@ -48,6 +48,9 @@ Route::get('/quick-online-loans-no-collateral-nigeria', function () {
 Route::get('/quick-personal-loans-nigeria', function () {
     return view('quick-personal-loans-nigeria');
 })->name('quick-personal-loans-nigeria');
+Route::get('/online-investment-company-nigeria', function () {
+    return view('online-investment-company-nigeria');
+})->name('online-investment-company-nigeria');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

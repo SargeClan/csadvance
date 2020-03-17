@@ -22,7 +22,7 @@
 
 <!--page title start-->
 <section class="section-gap section-top bg-gray text-center">
-    <div class="hero-img bg-navy-overlay" data-overlay="8" style="background-image: url({{asset('adv/img/get-quick-online-business-loans-nigeria.jpg')}});"></div>
+    <div class="hero-img bg-navy-overlay" data-overlay="2" style="background: #21409A;"></div>
     <div class="container">
         <div class="row justify-content-md-center align-items-center text-white py-lg-5">
             <div class="push-down col-md-7">
@@ -38,7 +38,7 @@
 <!--page title end-->
 <!--promo start-->
 <section class="section-gap">
-    <div class="hero-img parallax-img bg-overlay" data-overlay="0" style="background-image: url({{asset('adv/img/p4.jpg')}});"></div>
+    <div class="hero-img parallax-img bg-overlay" data-overlay="0" style="background-image: url(assets/img/p4.jpg);"></div>
     <div class="container">
         <!-- <div class="row justify-content-md-center text-center mb-lg-5 mb-4 ">
             <div class="col-md-6">
@@ -114,7 +114,7 @@
                      <div class="card">
                         <div class="card-header">
                             <h6>
-                                <a class="collapsed" data-toggle="collapse" data-target="#collapse-2-4">
+                                <a class="collapsed" data-toggle="collapse" data-target="#collapse-2-5">
                                     What does the CS Invest plan offer? 
                                 </a>
                             </h6>
@@ -128,7 +128,7 @@
                      <div class="card">
                         <div class="card-header">
                             <h6>
-                                <a class="collapsed" data-toggle="collapse" data-target="#collapse-2-4">
+                                <a class="collapsed" data-toggle="collapse" data-target="#collapse-2-6">
                                     How much can I access?
 
                                 </a>
@@ -143,7 +143,7 @@
                      <div class="card">
                         <div class="card-header">
                             <h6>
-                                <a class="collapsed" data-toggle="collapse" data-target="#collapse-2-4">
+                                <a class="collapsed" data-toggle="collapse" data-target="#collapse-2-7">
                                     Can I run concurrent loans?
                                 </a>
                             </h6>
@@ -157,7 +157,7 @@
                     <div class="card">
                         <div class="card-header">
                             <h6>
-                                <a class="collapsed" data-toggle="collapse" data-target="#collapse-2-4">
+                                <a class="collapsed" data-toggle="collapse" data-target="#collapse-2-8">
                                     What is a CS Target Account?
                                 </a>
                             </h6>
@@ -173,8 +173,8 @@
         </div>
         <div class="row justify-content-center text-center mt-lg-5 mt-4">
             <div class="col-md-6">
-                <p class="px-md-4">Didn’t get your desired question here? Please visit our <a href="#">knowledge base</a> or contact our
-                    <a href="tel:+23417007910">support</a> team for further query.</p>
+                <p class="px-md-4">Didn’t get your desired question here? Please contact
+                    <a href="tel:+23417007910">our support team</a> for further query.</p>
             </div>
         </div>
     </div>
@@ -182,13 +182,13 @@
 <!--promo end-->
 
 <!--promo start-->
-<div class="section-gap">
+<div class="section-cta">
     <div class="container">
         <div class="row justify-content-center align-items-center text-center">
             <div class="col-md-6 mb-lg-5 mb-4">
-                <h2 class="mb-4">Ready To Get Started</h2>
-                <p class="text-muted">Let's help you reach your financial goals.</p>
-                <a href="{{route('loan-application')}}" class="btn btn-pill btn-yellow btn-relative mt-lg-5">Apply Now</a>
+                <h2 class="mb-4">Ready To Get Started?</h2>
+                <p class="text-muted text-serve">Let's help you reach your financial goals.</p>
+                <a href="{{route('loan-application')}}" class="btn btn-pill btn-yellow mt-lg-5 btn-serve">Apply Now</a>
             </div>
         </div>
     </div>
