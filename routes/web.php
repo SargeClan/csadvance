@@ -51,6 +51,12 @@ Route::get('/quick-personal-loans-nigeria', function () {
 Route::get('/online-investment-company-nigeria', function () {
     return view('online-investment-company-nigeria');
 })->name('online-investment-company-nigeria');
+
+// Route::get('/investment-application', function () {
+//     return view('investment-application');
+// })->name('investment-application');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/investment-application', 'InvestmentController@index')->name('investment-application');
+Route::post('/investment-application', 'InvestmentController@store')->name('investment-application-store');

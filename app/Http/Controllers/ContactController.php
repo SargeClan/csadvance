@@ -26,16 +26,6 @@ class ContactController extends Controller
         }
     }
     public function loanApp(Request $request){
-        // $validatedData = $request->validate([
-        //     'full_name' => 'required',
-        //     'email' => 'required',
-        //     'phone' => 'required',
-        //     'amount' => 'required',
-        //     'repaymemt' => 'required',
-        //     'employment_status' => 'required',
-        //     'message' => 'required',
-        //     'terms' => 'required',
-        // ]);
             $userLoan = [
                 'full_name' => $request->full_name,
                 'email' => $request->email,

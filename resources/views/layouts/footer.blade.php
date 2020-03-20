@@ -11,7 +11,7 @@
                 <ul class="footer-link">
                     <li><a href="{{route('about')}}">about</a></li>
                     <li><a href="{{route('quick-online-loans-no-collateral-nigeria')}}">Loans</a></li>
-                    <li><a href="#">Investments</a></li>
+                    <li><a href="{{route('investment-application')}}">Investments</a></li>
                     <li><a href="{{route('loan-application-faq')}}">FAQ</a></li>
                     <li><a href="{{route('contact')}}">Contact</a></li>
                 </ul>

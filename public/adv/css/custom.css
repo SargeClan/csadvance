@@ -1,0 +1,9 @@
+#step-1 .nxt-btn{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nxt-btn, .end-btn{
+    display: flex;
+    justify-content: space-between;
+}

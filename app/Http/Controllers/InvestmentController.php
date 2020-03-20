@@ -3,38 +3,52 @@
 namespace App\Http\Controllers;
 use App\Investment;
 use Illuminate\Http\Request;
-use GuzzleHttp\Client;
+use App\Mail\UserInvestMail;
+use App\Mail\AdminUserInvestMail;
+use Illuminate\Support\Facades\Mail;
 class InvestmentController extends Controller
 {
-    public function getUser(Request $request)
+    public function index(Request $request)
     {
-      $bvn = $request->input('requested_data');
-      
-      $client = new Client(); //GuzzleHttp\Client
-      $result = $client->request('POST','http://api.secondcaesar.com:8080/PageEndPoints/WS/v1/ValidateBVNFull', [
-         
-        'form_params' => [
-              'request_data' => 'gef0uSyZWA8UAzdC8nw6F0gmtQFeEgdiItVE8/01fctI0caqKJvQ2GiH7nof/hAmsGGDzVSwv9cuxrxMUWVvcO8bZoZJ6VCYMTX6syQ1/InFxttnsMbmQ3Hq7ygdMOOokk4wruATNGrRi7N1WzEjNjXuY+bRISHV+/DM/DrXZJx6FlxtVmQ5EsnYrMj+j+EF1KW80tzS5FlEbcO4ykAO6mIZRbgfpltwCbtiF0nrK6rCycWfEIgmvoXYw58TSZgBcAyE1mRqbS8Mw4kuQmEvNgr/gryGzycxTHWguJIzZEzLxIiIs0AhS7r6oF/55oS1PlpAPNmIfPu8i4Xv8/dWWnifs/AXnb3SsSnBocPyykiirfGFooOwPosUsOeelGne75umBrYy0wSGJhj/z3oimUDNe14GdLwfvIl/Lfe74xuG6riVdP/Y6c3RN+JR02br9k/NhiiGLj80pREuvzBUs/sZaPDi+jOI4WIzJQg86JbR/LP590MKIhnYq9KQFu188eN5/fBT6VaeOW9i8DQoXUcf9Cn0ZCaVZ21zDlza6/aMywwWcTnD9mFmjALTGh3Zr7slpXDBBUFQp6F1LP8cvbopOAVkGXJDm9ymDra93Px4TM5Qs/GFvwVcBBvSpa6XMXsELm60QvLUcFbPF1qOz+UOFVSqmFpk1UogtX+D7UttN3Teo/HtGAS8k+wIGHdPMQRWnRrt0rRRg4Slbg4M+AHZSsV2FnpcCmaGki1QRn8RTQlJwAPAfBbqOlUgR1QvmPum69n2YBXU8Qe1uhLekq8j13gVw1bX5Eq0okh1cQSaSBwT4Zkd5FAy8pVuCn203r7naRxzh8W03/c1rBghjZP4VsR5WzUa/552cD3Va7b0x+Ax/v6s6WdK0VxPqvo45c6abAtQjfy3h0xbGpOrtQ==',
-          ]
-          // 'headers' => [
-          //   'Content-Type' => 'application/x-www-form-urlencoded',
-          // ],
-          // 'merchantKey' => [
-          //   'merchant_code' => 'CSA_4J9EI',
-          // ],
-      ]);
-       dd($result);
+        return view('investment-application');
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for storing specified resource.
      *
      * @param  \App\Investment  $investment
      * @return \Illuminate\Http\Response
      */
-    public function edit(Investment $investment)
+    public function store(Investment $investment, Request $request)
     {
-        //
+        
+        $validatedData = $request->validate([
+            'full_name' => 'required|max:40|min:10',
+             'email' => 'required|max:30|min:5',
+             'phone' => 'required|min:5',
+              'amount' => 'required',
+             'tenure' => 'required',
+            'message' => 'required',
+            'terms' => 'accepted'
+        ]);
+        $investment = [
+            'full_name' => request('full_name'),
+            'email' => request('email'),
+            'phone' => request('phone'),
+            'amount' => request('amount'),
+            'tenure' => request('tenure'),
+            'message' => request('message'),
+            'terms' => request('terms')
+        ];
+//dd($investment);
+        if($investment){
+            Mail::to($request->email)->send(new UserInvestMail($investment));
+            Mail::to('sargeapi@gmail.com')->send(new AdminUserInvestMail($investment));
+            return back()->with('success', 'Your application has been submitted. You will be contacted shortly by one of our representatives.');
+        }else{
+            return back()->with('error', 'An error occured, please try again!'); 
+        }
+        
     }
 
     /**

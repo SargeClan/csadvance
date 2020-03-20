@@ -15,7 +15,7 @@
 
     <!--custom styles-->
     <link href="{{asset('adv/css/main.css')}}" rel="stylesheet">
-
+    <link rel="stylesheet" href="{{asset('adv/css/custom.css')}}">
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/5465ec1475.js" crossorigin="anonymous"></script>
 
