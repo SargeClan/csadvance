@@ -52,9 +52,10 @@ Route::get('/online-investment-company-nigeria', function () {
     return view('online-investment-company-nigeria');
 })->name('online-investment-company-nigeria');
 
-// Route::get('/investment-application', function () {
-//     return view('investment-application');
-// })->name('investment-application');
+Route::get('/wise-loans-application', function () {
+    return view('wise-loans-application');
+})->name('wise-loans-application');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
