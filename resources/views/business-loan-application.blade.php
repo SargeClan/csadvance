@@ -45,7 +45,7 @@
                 <h2 class="mb-4">
                 With Our Fast & Easy Cash Loan Application</h2>
                 <p class="text-muted"> Life throws surprises at us when we least expect, we are here to help. Start your loan journey here!</p>
-                <a href="loan-application.html" class="btn btn-pill btn-yellow btn-relative mt-lg-5" data-toggle="modal" data-target="#BVNModal">Apply Now</a>
+                <a href="#" class="btn btn-pill btn-yellow btn-relative mt-lg-5" data-toggle="modal" data-target="#BVNModal">Apply Now</a>
                 <div>
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                     Success! Your application has been submitted. You will be contacted shortly by one of our representatives.
@@ -188,6 +188,25 @@
     </div>
 </div>
 <!--about us end-->
+
+<div class="modal fade" id="BVNModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+       <form>
+            <div class="form-group">
+                <label>BVN</label>
+                <input type="text" minlength = "11" maxlength = "11" id = "bvn" class="form-control" placeholder="input BVN" required>
+                <p id = "bvn-error" style="color:red;"></p>
+            </div>
+            <button type="submit" class="btn bvn-apply-btn btn-pill btn-yellow">Apply</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>     
+        </form>
+      </div>
+     
+    </div>
+  </div>
 
 
 

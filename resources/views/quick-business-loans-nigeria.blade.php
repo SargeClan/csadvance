@@ -45,7 +45,7 @@
                <!--  <h6>About Us</h6> -->
                 <h2 class="loan-service mb-4">Business Loans Made Simple!</h2>
                 <p class="text-muted">Financing is the lifeblood of every business. We understand the need for small and medium business owners in Nigeria to scale up. Our business loans are designed to meet your capital needs on the path to expansion and growth. Whether you're looking for a loan to capitalise on a strategic opportunity or a line of credit to meet an important business need, CS Advance is ready to help you build and grow your business.</p>
-                <a href="{{route('loan-application')}}" class="btn btn-pill btn-yellow btn-relative mt-lg-5">Apply Now</a>
+                <a href="{{route('business-loan-application')}}" class="btn btn-pill btn-yellow btn-relative mt-lg-5">Apply Now</a>
 
             </div>
             <div class="col-md-6">
@@ -121,7 +121,7 @@
                <!--  <h6>About Us</h6> -->
                 <h2 class="loan-service mb-4">Introducing CS WISE</h2>
                 <p class="text-muted">Our CS Women In Sustainable Enterprise loans is targeted at SME and individual lending for women. Our goal is to help women business owners in Nigeria scale in as little time as possible. Do you need a loan?.</p>
-                <a href="{{route('wise-loans-application')}}" class="btn btn-pill btn-yellow btn-relative mt-lg-5">Apply Now</a>
+                <a href="{{route('business-loans-application')}}" class="btn btn-pill btn-yellow btn-relative mt-lg-5">Apply Now</a>
 
             </div>
             <div class="col-md-6">
