@@ -45,7 +45,7 @@
                 <h2 class="mb-4">
                 With Our Fast & Easy Cash Loan Application</h2>
                 <p class="text-muted"> Life throws surprises at us when we least expect, we are here to help. Start your loan journey here!</p>
-                <a href="#" class="btn btn-pill btn-yellow btn-relative mt-lg-5" data-toggle="modal" data-target="#BVNModal">Apply Now</a>
+                <a href="#" class="btn btn-pill btn-yellow btn-relative mt-lg-5" data-toggle="modal" data-target="#BVNModal">Start Here</a>
                 <div>
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                     Success! Your application has been submitted. You will be contacted shortly by one of our representatives.
@@ -83,8 +83,12 @@
         <input type="text" readonly class="form-control" required>
     </div>
     <div class="form-group">
-        <label>Residual Status</label>
-        <input type="email" readonly class="form-control" placeholder="" required>
+        <label>Residential Status</label>
+        <select name="residential" class="form-control">
+        <option value="">Owned</option>
+        <option value="">Tenant</option>
+        </select>
+        <!-- <input type="email" readonly class="form-control" placeholder="" required> -->
     </div>
     <div class="form-group">
         <label>Email</label>
@@ -129,9 +133,17 @@
         </div>
         <div class="form-group">
             <label> Business Type</label>
-            <input type="text" class="form-control" placeholder="Type of Business?" required>
+            <select name="residential" class="form-control">
+        <option value="">Company</option>
+        <option value="">Sole Trader</option>
+        <option value="">Partnership</option>
+        <option value="">Tenant</option>
+        </select>
         </div>
-        <div class="form-group">
+        <!-- <input
+           
+        </div>
+         <div class="form-group">
             <label>Company</label>
             <input type="text" class="form-control" placeholder="Enter Company Name." required>
         </div>
@@ -142,11 +154,11 @@
         <div class="form-group">
             <label>Partnership</label>
             <input type="text" class="form-control" placeholder="Enter Partnership Details." required>
-        </div>
+        </div>-->
         <div class="form-group">
-            <label> Other Organization Type - Please specify(TIN)</label>
+            <label> Company Registration Number or TIN (Tax Identification Number)</label>
             <input type="text" class="form-control" placeholder="Enter Details." required>
-        </div>
+        </div> 
         <div class="form-group">
             <label>No of Outlets</label>
             <input type="number" class="form-control" required>
@@ -171,10 +183,10 @@
             <label> Business Bank Account</label>
             <input type="text" class="form-control" placeholder="Enter Details." required>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label>BVN</label>
             <input type="text" readonly class="form-control" placeholder="Enter Details." required>
-        </div>
+        </div> -->
         <div class="nxt-btn">
             <button type="button" id="prev-2" class="btn btn-pill btn-yellow">Previous</button>
             <button type="submit" id="submit-btn" class="btn btn-pill btn-yellow">Finish</button>

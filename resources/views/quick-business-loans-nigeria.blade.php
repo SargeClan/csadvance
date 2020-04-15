@@ -121,7 +121,7 @@
                <!--  <h6>About Us</h6> -->
                 <h2 class="loan-service mb-4">Introducing CS WISE</h2>
                 <p class="text-muted">Our CS Women In Sustainable Enterprise loans is targeted at SME and individual lending for women. Our goal is to help women business owners in Nigeria scale in as little time as possible. Do you need a loan?.</p>
-                <a href="{{route('business-loans-application')}}" class="btn btn-pill btn-yellow btn-relative mt-lg-5">Apply Now</a>
+                <a href="{{route('business-loan-application')}}" class="btn btn-pill btn-yellow btn-relative mt-lg-5">Apply Now</a>
 
             </div>
             <div class="col-md-6">

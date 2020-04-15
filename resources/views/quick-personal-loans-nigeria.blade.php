@@ -47,7 +47,7 @@
                 <p class="text-muted">
                 Live life to the max with our personal loans solutions. At CSAdvance, we are committed to making your financial life easier when there is an emergency. Our pay small-small package allows you get fast cash at the click of a 
                 button at a minimal interest rate. Join the quick crew today! We are here to help you.</p>
-                <a href="{{route('loan-application')}}" class="btn btn-pill btn-yellow btn-relative mt-lg-5">Apply Now</a>
+                <a href="{{route('loan-application')}}" class="btn btn-pill btn-yellow btn-relative mt-lg-5">Start Here</a>
 
             </div>
             <div class="col-md-6">
