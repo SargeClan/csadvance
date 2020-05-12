@@ -15,7 +15,7 @@
    @include('layouts.header')
    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
    <style>
-   #sorry {
+   #sorry .amountLimit {
     display: none;
 }
    </style>
@@ -53,18 +53,20 @@
                 With Our Fast & Easy Cash Loan Application</h2>
                 <p class="text-muted"> Life throws surprises at us when we least expect, we are here to help. Start your loan journey here!</p>
                 <div>
+                    @if(session()->has('success'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    Success! Your application has been submitted. You will be contacted shortly by one of our representatives.
+                    Success! <span>{{ session()->get('success') }}</span>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                @endif
+                {{-- <div class="alert alert-danger alert-dismissible fade show" role="alert">
                     An error occured, please try again!
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
-                </div>
+                </div> --}}
                 <div id="required-msg" class="alert alert-danger alert-dismissible fade show" role="alert">
                     Please fill in a fields.
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -72,7 +74,7 @@
                     </button>
                 </div>
 
-                <div id="eligibilty-msg" class="alert alert-danger alert-dismissible fade show" role="alert">
+                <div id="sorry" class="alert alert-danger alert-dismissible fade show" role="alert">
                     Sorry! You are not eligible for our loans. You must be employed or self employed to apply.
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">×</span>
@@ -81,7 +83,7 @@
                 </div>
 
             </div>
-
+{{-- 
             <div class="col-md-6">
                 <form>
                     <div id="step-1" class="">
@@ -393,6 +395,66 @@
                     </div>
                     <!-- <button type="submit" class="btn btn-pill btn-yellow">Apply</button> -->
                 </form>
+            </div> --}}
+            <div class="col-md-6">
+                <form action="{{route('loan-application-store')}}" method="POST">
+                @csrf 
+                @method('POST')
+    <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" name="full_name" class="form-control" placeholder="Enter full name" required value="{{old('first_name')}}">
+        <div class="text-danger">{{$errors->first('full_name')}}</div>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" class="form-control" placeholder="Enter email" required value="{{old('email')}}">
+        <div class="text-danger">{{$errors->first('email')}}</div>
+    </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" name="phone" class="form-control" placeholder="Enter phone number" required value="{{old('phone')}}">
+        <div class="text-danger">{{$errors->first('phone')}}</div>
+    </div>
+      <div class="form-group">
+        <label>Loan Amount <span id="amountLimit" style="color:red;"></span></label>
+        <input type="text" class="form-control loan" name="amount"  placeholder="Amount" value="{{old('amount')}}" required>
+        <div class="text-danger">{{$errors->first('amount')}}</div>
+    <div class="text-danger">{{$errors->first('img_3')}}</div></div>
+        <div class="form-group">
+            <label>Repayment Period</label>
+        <select class="custom-select" name="tenure" required value="{{old('tenure')}}">
+            <option selected>Select an appropriate timeframe</option>
+            <option value="3 months">3 months</option>
+            <option value="6 months">6 months</option>
+            <option value="9 months">9 months</option>
+            <option value="12 months">12 months</option>
+
+        </select>
+        <div class="text-danger">{{$errors->first('tenure')}}</div>
+    </div>
+      <div class="form-group">
+        <label>Employment Status </label>
+        <select class="custom-select occupation" name="occupation" id="emp" required >
+            <option selected>Select an appropriate option</option>
+            <option value="Employed">Employed</option>
+            <option value="Self-employed">Self Employed</option>
+            <option value="Unemployed">Unemployed</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Message</label>
+        <textarea class="form-control" name="message" rows="5" placeholder="Additional message">{{old('message')}}</textarea>
+    
+        <div class="text-danger">{{$errors->first('message')}}</div></div>
+    <div class="form-group">
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" name="terms" class="custom-control-input" id="customCheck0" >
+            <label class="custom-control-label" for="customCheck0">I accept all terms and conditions</label>
+        </div>
+        <div class="text-danger">{{$errors->first('img_3')}}</div>
+    </div>
+    <button type="submit" class="btn btn-pill btn-yellow occupation-button">Invest</button>
+</form>
             </div>
         </div>
     </div>
@@ -405,29 +467,31 @@
 
 @include('layouts.footer')
 <script>
-$(document).ready(function () {
+ $(document).ready(function () {
+     $("#sorry").hide();
     $(".occupation").click(function () {
         if ($(this).val() == "Unemployed") {
-            $("#sorry").show() 
-            $(".occupation-button").hide()
+            $("#sorry").show();
+            $(".occupation-button").hide();
         }
         if ($(this).val() != "Unemployed") {
             $("#sorry").hide()
             $(".occupation-button").show()
         }
     });
-    $("#yes").click(function () {
-        $("#type-of-loan").show()
-    });
-    $("#no").click(function () {
-        $("#type-of-loan").hide()
-    });
+    // $("#yes").click(function () {
+    //     $("#type-of-loan").show()
+    // });
+    // $("#no").click(function () {
+    //     $("#type-of-loan").hide()
+    // });
     $(".loan").keyup(function () {
         if ($(this).val() < 200000 ) {
             //$(".amountLimit").hide() 
             document.getElementById("amountLimit").innerHTML = " must be greater than 200,000 naira";
             $('.occupation-button').attr('disabled', true);
         }
+        
         if ($(this).val() > 5000000) {
             document.getElementById("amountLimit").innerHTML = " must not be greater than 5,000,000 naira";
             $('.occupation-button').attr('disabled', true);

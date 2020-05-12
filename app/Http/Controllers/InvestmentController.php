@@ -5,6 +5,8 @@ use App\Investment;
 use Illuminate\Http\Request;
 use App\Mail\UserInvestMail;
 use App\Mail\AdminUserInvestMail;
+use App\Mail\UserLoanMail;
+use App\Mail\AdminLoanMail;
 use Illuminate\Support\Facades\Mail;
 class InvestmentController extends Controller
 {
@@ -51,6 +53,39 @@ class InvestmentController extends Controller
         
     }
 
+ public function loan(Request $request)
+    {
+        
+        $validatedData = $request->validate([
+            'full_name' => 'required|max:40|min:10',
+             'email' => 'required|max:30|min:5',
+             'phone' => 'required|min:5',
+              'amount' => 'required',
+             'tenure' => 'required',
+             'occupation' => 'required',
+            'message' => 'required',
+            'terms' => 'accepted'
+        ]);
+        $loan = [
+            'full_name' => request('full_name'),
+            'email' => request('email'),
+            'phone' => request('phone'),
+            'amount' => request('amount'),
+            'tenure' => request('tenure'),
+            'occupation' => request('occupation'),
+            'message' => request('message'),
+            'terms' => request('terms')
+        ];
+//dd($investment);
+        if($loan){
+            Mail::to($request->email)->send(new UserLoanMail($loan));
+            Mail::to('sargeapi@gmail.com')->send(new AdminLoanMail($loan));
+            return back()->with('success', 'Your application has been submitted. You will be contacted shortly by one of our representatives.');
+        }else{
+            return back()->with('error', 'An error occured, please try again!'); 
+        }
+        
+    }
     /**
      * Update the specified resource in storage.
      *

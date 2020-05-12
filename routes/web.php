@@ -61,3 +61,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/investment-application', 'InvestmentController@index')->name('investment-application');
 Route::post('/investment-application', 'InvestmentController@store')->name('investment-application-store');
+Route::post('/loan-application', 'InvestmentController@loan')->name('loan-application-store');
